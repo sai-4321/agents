@@ -1,6 +1,8 @@
 import streamlit as st
 import requests as req
 from google import genai
+from dotenv import load_dotenv
+load_dotenv()
 
 
 st.title("weather suggestion app")
@@ -12,7 +14,7 @@ def api_data(city):
        return dataa.json()
 def llm_call(data):
 
- client = genai.Client(api_key="AIzaSyCZbZD3-LpEgonyvKZEXNN4TVReT2D5D5E")
+ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
  response = client.models.generate_content(
 
