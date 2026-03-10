@@ -1,2 +1,0 @@
-# agents
-agentic ai
