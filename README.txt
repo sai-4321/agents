@@ -1,4 +1,4 @@
-here are the things that neede to be downloaded
+here are the things that need to be downloaded
 
 create a virtual environment to install things only to that particular file 
 
