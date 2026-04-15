@@ -4,7 +4,6 @@ from google import genai
 from dotenv import load_dotenv
 load_dotenv()
 
-
 st.title("weather suggestion app")
 
 def api_data(city):
