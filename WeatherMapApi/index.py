@@ -1,5 +1,6 @@
 import streamlit as st
 import requests as req
+import os
 from google import genai
 from dotenv import load_dotenv
 load_dotenv()
@@ -8,7 +9,8 @@ st.title("weather suggestion app")
 
 def api_data(city):
        
-       url=f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=f9006f6ab25c63ab8a7f1885398cd55a"
+       WEATHER_API_KEY = os.getenv("WEATHER_API_KEY")
+       url=f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={WEATHER_API_KEY}"
        dataa=req.get(url)
        return dataa.json()
 def llm_call(data):
